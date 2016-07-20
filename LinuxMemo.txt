@@ -1,0 +1,18 @@
+画面崩溃时logoff
+sudo service lightdm restart
+
+
+13. 安装Cairo-Dock并启用桌面视觉效果
+$ sudo apt-getinstall cairo-dock cairo-dock-plug-ins
+
+
+/launcher 位置
+Launch the Dconf Editor application and navigate to com > canonical > unity > launcher.
+
+Click the “launcher-position” value in the right pane and set it to “Bottom.” You can also set it back to “Left” from here.
+
+
+---------
+sudo apt-get autoclean                清理旧版本的软件缓存
+sudo apt-get clean                    清理所有软件缓存
+sudo apt-get autoremove             删除系统不再使用的孤立软件
