@@ -1,27 +1,30 @@
---安装
---sudo apt-get install docker.io
+#Docker 记录
 
-sudo apt-get install apt-transport-https ca-certificates
+##安装
+* 必要条件
+1. 64位
+2. Linux虚拟机 内核3.11以上
 
-sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+* 步骤 （Ubuntu 16.04）
 
-sudo vi /etc/apt/sources.list.d/docker.list 
+1. 安装相关包
 
-Ubuntu Xenial 16.04 (LTS)
-deb https://apt.dockerproject.org/repo ubuntu-xenial main
+    	sudo apt-get install apt-transport-https ca-certificates
 
-sudo apt-get update
-$ sudo apt-get purge lxc-docker
+		sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 -- recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
 
---查看
-$ apt-cache policy docker-engine
+2. 编辑docker.list
+		sudo vi /etc/apt/sources.list.d/docker.list
+Ubuntu Xenial 16.04 (LTS)时如下添加一行
+		deb https://apt.dockerproject.org/repo ubuntu-xenial main
 
---安装
-sudo apt-get update
-sudo apt-get install docker-engine
-sudo service docker start
-sudo docker run hello-world
+3. 安装
+		sudo apt-get update
+		sudo apt-get install docker-engine
+4. 启动		
+        sudo service docker start
+		sudo docker run hello-world
 
 --追加dockerGroup
 --如果没有组的好追加
@@ -67,12 +70,8 @@ EXPOSE 8080
 
 export JAVA_HOME=/usr/local/jdk	
 
-
-
-
-
-
-
+![][1]
+[1]: http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1
 
 
 
